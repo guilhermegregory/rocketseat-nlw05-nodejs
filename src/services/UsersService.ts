@@ -27,6 +27,14 @@ class UsersService {
 
     return user;
   };
+
+  async findByEmail(email: string) {
+    const user = this.usersRepository.findOne({
+      email
+    });
+
+    return user;
+  };
 };
 
 export { UsersService };
